@@ -1,18 +1,4 @@
-.portfolio-avatar {
-  /* You must set a specific, equal width and height */
-  width: 180px;
-  height: 180px;
-  
-  /* The magic line for the circle */
-  border-radius: 50%;
-  
-  /* Prevents the image from stretching */
-  object-fit: cover;
-  
-  /* Optional: keeps the image from being 'inline' which helps with spacing */
-  display: block;
-  margin: 0 auto; /* Centers it if it's the only thing on the line */
-}
+
 
 /* Variables for easy theme changes */
 :root {
