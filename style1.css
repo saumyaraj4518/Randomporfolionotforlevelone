@@ -1,14 +1,4 @@
-
-
-/* Variables for easy theme changes */
-:root {
-    --bg-color: #080808;
-    --main-color: #00e5ff; 
-    --secondary-glow: #9d00ff;
-    --text-color: #ffffff;
-    --card-bg: rgba(255, 255, 255, 0.03);
-}
-
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -18,32 +8,51 @@
     list-style: none;
 }
 
+/* ===== BODY ===== */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: black;
+    color: white;
 }
 
-/* Navigation */
+/* ===== NAVIGATION ===== */
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1.5rem 10%;
-    background: rgba(0, 0, 0, 0.9);
+    background: black;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-.logo { font-size: 1.6rem; font-weight: 700; }
-.logo span { color: var(--main-color); }
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
 
-nav ul { display: flex; }
-nav ul li { margin-left: 2.5rem; cursor: pointer; transition: 0.3s; font-size: 0.9rem; }
-nav ul li:hover { color: var(--main-color); text-shadow: 0 0 10px var(--main-color); }
+.logo span {
+    color: cyan;
+}
 
-/* Hero Section */
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+nav ul li:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
     height: 100vh;
     display: flex;
@@ -53,28 +62,39 @@ nav ul li:hover { color: var(--main-color); text-shadow: 0 0 10px var(--main-col
     text-align: left;
 }
 
-.hero-text h1 { font-size: 3.5rem; margin: 10px 0; }
-.hero-text h3 { font-size: 1.8rem; font-weight: 400; }
-.hero-text span { color: var(--main-color); }
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin: 10px 0;
+}
 
+.hero-text h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.hero-text span {
+    color: cyan;
+}
+
+/* ===== BUTTON ===== */
 .btn {
     display: inline-block;
     margin-top: 2rem;
     padding: 12px 30px;
-    background: var(--main-color);
-    color: #000;
+    background: cyan;
+    color: black;
     font-weight: 600;
     border-radius: 30px;
-    box-shadow: 0 0 15px var(--main-color);
+    box-shadow: 0 0 15px cyan;
     transition: 0.4s ease;
 }
 
 .btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 30px var(--main-color);
+    box-shadow: 0 0 30px cyan;
 }
 
-/* Skills Section - The Neon Box Look */
+/* ===== SKILLS SECTION ===== */
 .skills {
     padding: 100px 10%;
     text-align: center;
@@ -85,23 +105,25 @@ nav ul li:hover { color: var(--main-color); text-shadow: 0 0 10px var(--main-col
     margin-bottom: 2rem;
 }
 
-/* Gradient Border Container */
+/* Gradient Border */
 .skills-border-gradient {
-    padding: 2px; /* This creates the border thickness */
-    background: linear-gradient(45deg, var(--main-color), var(--secondary-glow));
+    padding: 2px;
+    background: linear-gradient(45deg, cyan, violet);
     border-radius: 15px;
     display: inline-block;
 }
 
+/* Skills Container */
 .skills-container {
-    background: var(--bg-color);
+    background: black;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 40px 60px;
-    border-radius: 13px; /* Slightly smaller than outer border */
+    border-radius: 13px;
 }
 
+/* Skill Box */
 .skill-box {
     text-align: center;
     transition: 0.3s;
@@ -111,6 +133,29 @@ nav ul li:hover { color: var(--main-color); text-shadow: 0 0 10px var(--main-col
     font-size: 3.5rem;
     display: block;
     margin-bottom: 10px;
+}
+
+.skill-box p {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.skill-box:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px cyan);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}    margin-bottom: 10px;
 }
 
 .skill-box p {
